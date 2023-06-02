@@ -70,12 +70,12 @@ void PlayerController::update() {
         Log::log("selected block " + std::to_string(_player->selectedBlock()));
         _updateCubeInHandCallBack();
     }
-    if (_mouse->isButtonTapped(sf::Mouse::Button::Right)) {
+    if (_mouse->isButtonTapped(sf::Mouse::Button::Left)) {
         _addCubeCallBack();
 
         SoundController::loadAndPlay(SoundTag("add"), Cube::soundName(_player->selectedBlock()));
     }
-    if (_mouse->isButtonTapped(sf::Mouse::Button::Left)) {
+    if (_mouse->isButtonTapped(sf::Mouse::Button::Right)) {
         Cube::Type t = _removeCubeCallBack();
         if (t != Cube::none) {
             SoundController::loadAndPlay(SoundTag("remove"), Cube::soundName(t));
