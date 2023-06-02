@@ -8,6 +8,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Vec2D.h"
+#include <cstdint>
 
 namespace Consts {
     const int STANDARD_SCREEN_WIDTH = 1920;
